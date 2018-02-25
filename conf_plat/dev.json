@@ -1,0 +1,28 @@
+{
+    "mysql" :
+    {
+        "DB_HOST"     : "",
+        "DB_USER"     : "",
+        "DB_PWD"      : ""
+    },
+    "kvstore" :
+    {
+        "host" : "",
+        "port" : "",
+        "auth" : ""
+    },
+
+    "xuuid" : [ { "host" : "127.0.0.1" , "port" : 5001 ,"insid" : 0 } ],
+    "queue" : {
+    },
+    "UAC" :
+    {
+        "host" : "api.uac.test.%{DOMAIN}",
+        "port" : "80"
+    },
+    "NOTIFYGW" :
+    {
+        "host" : "api.ngw.test.%{DOMAIN}",
+        "port" : "80"
+    }
+}
