@@ -51,7 +51,7 @@ _env:
                 DB_NAME         : "${PRJ_NAME}_${USER}"
                 RUN_ENV         : "dev"
             - !R.vars
-                _json: "${HERO_ENV}/conf_plat/dev.json:/mysql"
+                _json: "${PLAT_ENV}/conf_plat/dev.json:/mysql"
 
     - !R.env
         _name : "_demo"
@@ -62,7 +62,7 @@ _env:
                 DB_NAME         : "${PRJ_NAME}_demo"
                 RUN_ENV         : "demo"
             - !R.vars
-                _json: "${HERO_ENV}/conf_plat/demo.json:/mysql"
+                _json: "${PLAT_ENV}/conf_plat/demo.json:/mysql"
     - !R.env
         _name : "_ci"
         _mix  : "_debug,_speed_min"
@@ -72,7 +72,7 @@ _env:
                 DB_NAME        : "${PRJ_NAME}_lab"
                 RUN_ENV        : "lab"
             - !R.vars
-                _json: "${HERO_ENV}/conf_plat/ci.json:/mysql"
+                _json: "${PLAT_ENV}/conf_plat/ci.json:/mysql"
 
 
     - !R.env
@@ -84,7 +84,7 @@ _env:
                 DB_NAME        : "${PRJ_NAME}_lab"
                 RUN_ENV        : "lab"
             - !R.vars
-                _json: "${HERO_ENV}/conf_plat/lab.json:/mysql"
+                _json: "${PLAT_ENV}/conf_plat/lab.json:/mysql"
 
     - !R.env
         _name : "_test"
@@ -95,7 +95,7 @@ _env:
                 DB_NAME        : "${PRJ_NAME}_test"
                 RUN_ENV        : "test"
             - !R.vars
-                _json: "${HERO_ENV}/conf_plat/test.json:/mysql"
+                _json: "${PLAT_ENV}/conf_plat/test.json:/mysql"
 
     - !R.env
         _name : "_beta"
@@ -135,7 +135,7 @@ _env:
                 BIZ_SDK       : "/data/x/sdks/biz_sdk/"
                 XCC_VENDOR    : "/data/x/libs/xcc_vendor"
                 XCC_LIBS      : "${XCC_VENDOR}:${BIZ_SDK}"
-                TPL_ROOT : "${HERO_ENV}/tpl_plat/v1/"
+                TPL_ROOT : "${PLAT_ENV}/tpl_plat/v1/"
             - !R.path
                 dst  : "${PRJ_ROOT}/conf/used "
 
